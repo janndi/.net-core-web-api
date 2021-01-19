@@ -1,6 +1,6 @@
 ﻿using Application.Requests.Commands;
 using Domain.ResultTypes;
-using Infrastructure.Persistence.Repositories.Interface;
+using Infrastructure.Persistence.Interface;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

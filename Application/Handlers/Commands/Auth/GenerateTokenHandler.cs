@@ -2,7 +2,7 @@
 using Application.Requests.Commands;
 using Domain.Models.Enums;
 using Domain.ResultTypes;
-using Infrastructure.Persistence.Repositories.Interface;
+using Infrastructure.Persistence.Interface;
 using MediatR;
 using System;
 using System.Linq;
@@ -26,6 +26,10 @@ namespace Application.Handlers.CommandHandlers
 
             if (user == null)
                 throw new ApiException(ErrorCodes.BadRequest, "User does not exist.");
+
+            if (user.Status == (int)Status.Inactive)
+                throw new ApiException(ErrorCodes.BadRequest, "Your account is In-Active. Please contact administrator");
+
 
             try
             {

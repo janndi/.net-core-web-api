@@ -1,8 +1,6 @@
-﻿using Infrastructure.Persistence.Repositories.Interface;
+﻿using Infrastructure.Persistence.Interface;
+using Infrastructure.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Infrastructure.Extension
 {
@@ -11,6 +9,8 @@ namespace Infrastructure.Extension
         public static void RegisterInfraServices(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<IMailServiceRepository, MailServiceRepository>();
         }
     }
 }

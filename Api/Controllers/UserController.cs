@@ -8,23 +8,25 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/v1/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IMediator mediator;
-
-        public UserController(IMediator mediator)
+        private readonly IHttpContextAccessor httpContextAccessor;
+        public UserController(IMediator mediator, IHttpContextAccessor httpContextAccessor)
         {
             this.mediator = mediator;
+            this.httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost]
-        [AllowAnonymous]
         [Route("")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserDTO))]
         [Produces("application/json")]
@@ -51,7 +53,6 @@ namespace Api.Controllers
         }
 
         [HttpDelete]
-        [AllowAnonymous]
         [Route("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BooleanResult))]
         [Produces("application/json")]
@@ -64,12 +65,11 @@ namespace Api.Controllers
         }
 
         [HttpPut]
-        [AllowAnonymous]
         [Route("delete-multiple")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BooleanResult))]
         [Produces("application/json")]
         [Consumes("application/json")]
-        public async Task<IActionResult> DeleteMultiple(List<Guid> ids)
+        public async Task<IActionResult> DeleteMultiple(string ids)
         {
             var result = await mediator.Send(new DeleteBatchUserCommand(ids));
 
@@ -94,6 +94,30 @@ namespace Api.Controllers
         public async Task<IActionResult> GetSingle(Guid id)
         {
             var result = await mediator.Send(new GetSingleUserQuery(id));
+
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("me")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserDTO))]
+        [Produces("application/json")]
+        public async Task<IActionResult> GetMe()
+        {
+            //Get Claims for authenticated user
+            string userName = httpContextAccessor.HttpContext.User.FindFirstValue("sub");
+
+            var result = await mediator.Send(new GetUserByUsernameQuery(userName));
+
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("validate-email")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BooleanResult))]
+        public async Task<IActionResult> ValidateEmail(string email)
+        {
+            var result = await mediator.Send(new ValidateEmailQuery(email));
 
             return Ok(result);
         }

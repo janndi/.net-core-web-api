@@ -5,6 +5,7 @@ using AutoMapper;
 using Infrastructure.Extension;
 using Infrastructure.Persistence.Context;
 using Infrastructure.ThirdpartyService.IndentityServer;
+using Infrastructure.ThirdpartyService.MailService;
 using Infrastructure.ThirdpartyService.Swagger;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,8 +18,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Reflection;
+using System.Text;
 using System.Text.Json;
 
 namespace Api
@@ -33,7 +36,7 @@ namespace Api
 
             AppSettings.LoadSettings(configuration);
             IdentityServerConfiguration.LoadIS4Settings(configuration);
-            //MailServiceConfiguration.LoadMailServiceSettings(configuration);
+            MailServiceConfiguration.LoadMailServiceSettings(configuration);
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -52,7 +55,7 @@ namespace Api
                 .AddCors()
                 .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Latest);
-
+            
             //Identity Server Auth Configuration
             services.AddAuthentication(options =>
             {
@@ -63,7 +66,7 @@ namespace Api
              {
                  options.Authority = IdentityServerConfiguration.Instance.IS4URI;
                  options.RequireHttpsMetadata = false;
-                 options.ApiName = "api_poc";
+                 options.ApiName = "api_is4";
              });
 
             services.AddMediatR(Assembly.GetExecutingAssembly());

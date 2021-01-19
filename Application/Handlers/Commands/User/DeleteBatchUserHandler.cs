@@ -3,7 +3,7 @@ using Application.Requests.Commands;
 using Domain.Models.Enums;
 using Domain.ResultTypes;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Repositories.Interface;
+using Infrastructure.Persistence.Interface;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -26,14 +26,14 @@ namespace Application.Handlers.CommandHandlers
             try
             {
                 List<User> users = new List<User>();
-
-                foreach (Guid id in request.Ids)
+                string[] ids = request.Ids.Split(',');
+                foreach (string id in ids)
                 {
-                    var oUser = await _userRepository.GetByIdAsync(id);
+                    var oUser = await _userRepository.GetByIdAsync(Guid.Parse(id));
 
                     if (oUser != null)
                     {
-                        oUser.Status = (int)Status.Deleted;
+                        oUser.Status = (int)Status.Inactive;
                         users.Add(oUser);
                     }
                 }

@@ -2,7 +2,7 @@
 using Application.Requests.Commands;
 using Domain.Models.Enums;
 using Domain.ResultTypes;
-using Infrastructure.Persistence.Repositories.Interface;
+using Infrastructure.Persistence.Interface;
 using MediatR;
 using System;
 using System.Threading;

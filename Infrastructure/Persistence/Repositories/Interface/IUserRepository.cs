@@ -3,7 +3,7 @@ using Domain.SeedWork;
 using Infrastructure.Persistence.Entities;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Persistence.Repositories.Interface
+namespace Infrastructure.Persistence.Interface
 {
     public interface IUserRepository : IRepository<User>
     {

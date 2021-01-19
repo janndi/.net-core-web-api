@@ -4,7 +4,7 @@ using AutoMapper;
 using Domain.Models.DTO;
 using Domain.Models.Enums;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Repositories.Interface;
+using Infrastructure.Persistence.Interface;
 using MediatR;
 using System;
 using System.Collections.Generic;

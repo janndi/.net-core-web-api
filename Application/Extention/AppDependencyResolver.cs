@@ -22,6 +22,8 @@ namespace Application.Extention
             ////User
             services.AddScoped<IRequestHandler<GetSingleUserQuery, UserDTO>, GetSingleUserQueryHandler>()
                     .AddScoped<IRequestHandler<GetAllUserQuery, IEnumerable<UserDTO>>, GetAllUserQueryHandler>()
+                    .AddScoped<IRequestHandler<GetUserByUsernameQuery, UserDTO>, GetUserByUsernameHandler>()
+                    .AddScoped<IRequestHandler<ValidateEmailQuery, BooleanResult>, ValidateEmailQueryHandler>()
                     .AddScoped<IRequestHandler<CreateUserCommand, UserDTO>, CreateUserHandler>()
                     .AddScoped<IRequestHandler<UpdateUserCommand, UserDTO>, UpdateUserHandler>()
                     .AddScoped<IRequestHandler<DeleteUserCommand, BooleanResult>, DeleteUserHandler>()

@@ -1,6 +1,7 @@
 ﻿using Domain.ResultTypes;
 using Infrastructure.Persistence.Context;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Interface;
 using Infrastructure.ThirdpartyService.IndentityServer;
 using Newtonsoft.Json.Linq;
 using System;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Persistence.Repositories.Interface
+namespace Infrastructure.Persistence.Repositories
 {
     public class UserRepository : BaseRepository<User>, IUserRepository
     {
@@ -23,10 +24,12 @@ namespace Infrastructure.Persistence.Repositories.Interface
 
             List<KeyValuePair<string, string>> keyValues = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("grant_type", "client_credentials"),
+                new KeyValuePair<string, string>("grant_type", "password"),
                 new KeyValuePair<string, string>("scope", "apiscope"),
                 new KeyValuePair<string, string>("client_id", IdentityServerConfiguration.Instance.CLIENT_ID),
-                new KeyValuePair<string, string>("client_secret", IdentityServerConfiguration.Instance.CLIENT_SECRET)
+                new KeyValuePair<string, string>("client_secret", IdentityServerConfiguration.Instance.CLIENT_SECRET),
+                new KeyValuePair<string, string>("username", username),
+                new KeyValuePair<string, string>("password", password)
             };
 
             request.Content = new FormUrlEncodedContent(keyValues);

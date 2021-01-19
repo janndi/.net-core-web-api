@@ -4,7 +4,7 @@ using AutoMapper;
 using Domain.Models.DTO;
 using Domain.Models.Enums;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Repositories.Interface;
+using Infrastructure.Persistence.Interface;
 using MediatR;
 using System;
 using System.Linq;
@@ -29,8 +29,8 @@ namespace Application.Handlers.CommandHandlers
             try
             {
                 User user = _userRepository.GetById(request.Id);
-                user.FirstName = request.Firstname;
-                user.LastName = request.Lastname;
+                user.FirstName = request.FirstName;
+                user.LastName = request.LastName;
                 user.Email = request.Email;
                 user.Password = request.Password;
                 user.Status = request.Status;

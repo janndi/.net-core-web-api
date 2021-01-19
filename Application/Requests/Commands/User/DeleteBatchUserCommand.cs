@@ -7,9 +7,9 @@ namespace Application.Requests.Commands
 {
     public class DeleteBatchUserCommand : IRequest<BooleanResult>
     {
-        public List<Guid> Ids { get; set; }
+        public string Ids { get; set; }
 
-        public DeleteBatchUserCommand(List<Guid> ids)
+        public DeleteBatchUserCommand(string ids)
         {
             Ids = ids;
         }

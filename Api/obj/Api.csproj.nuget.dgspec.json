@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jannj\\source\\repos\\Api\\Api\\Api.csproj": {}
+    "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jannj\\source\\repos\\Api\\Api\\Api.csproj": {
+    "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jannj\\source\\repos\\Api\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Api\\Api.csproj",
+        "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\jannj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jannj\\source\\repos\\Api\\Api\\obj\\",
+        "outputPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,14 +31,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\jannj\\source\\repos\\Api\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Application\\Application.csproj"
+              "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Application\\Application.csproj"
               },
-              "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj"
+              "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -122,14 +122,14 @@
         }
       }
     },
-    "C:\\Users\\jannj\\source\\repos\\Api\\Application\\Application.csproj": {
+    "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jannj\\source\\repos\\Api\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\jannj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jannj\\source\\repos\\Api\\Application\\obj\\",
+        "outputPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -149,11 +149,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj"
+              "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -211,14 +211,14 @@
         }
       }
     },
-    "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj": {
+    "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\jannj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -274,14 +274,14 @@
         }
       }
     },
-    "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\jannj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jannj\\source\\repos\\Api\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -301,8 +301,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\jannj\\source\\repos\\Api\\Domain\\Domain.csproj"
+              "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\jannj\\Documents\\Practice\\.net-core-web-api\\Domain\\Domain.csproj"
               }
             }
           }
@@ -334,6 +334,10 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.10.1, )"
             },
             "RestSharp": {
               "target": "Package",
